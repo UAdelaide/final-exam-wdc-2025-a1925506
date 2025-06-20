@@ -35,7 +35,7 @@ router.get('/me', (req, res) => {
   res.json(req.session.user);
 });
 
-// POST login - changed 
+// POST login - changed login form to accept username instead of email
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
