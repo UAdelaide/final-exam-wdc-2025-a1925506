@@ -15,7 +15,48 @@
 
         <script src="indexjs.js" defer></script>
 
-        
+        <style>
+            .container {
+              position: relative;
+              width: 500px;
+              height: 300px;
+              border: 1px solid #ccc;
+              margin: 50px auto;
+              background-color: #f0f0f0;
+            }
+
+            .text-box {
+              position: absolute;
+              width: 200px;
+              height: 100px;
+              padding: 10px;
+              color: white;
+              font-weight: bold;
+              border: 2px solid black;
+              box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            }
+
+            .box1 {
+              background-color: crimson;
+              top: 20px;
+              left: 30px;
+              z-index: 1;
+            }
+
+            .box2 {
+              background-color: royalblue;
+              top: 40px;
+              left: 60px;
+              z-index: 2;
+            }
+
+            .box3 {
+              background-color: darkgreen;
+              top: 60px;
+              left: 90px;
+              z-index: 3;
+            }
+          </style>
 
     </head>
 
