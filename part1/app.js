@@ -48,7 +48,7 @@ app.get('/api/dogs', async (req, res) => {
 // Route to return open walk requests as JSON
 app.get('/api/walkrequests/open', async (req, res) => {
     try {
-      const [openreq] = await db.execute('SELECT WalkRequests.request_id, Dogs.name AS dog_name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.username FROM WalkRequests INNER JOIN Dogs ON Dogs.dog_id = WalkRequests.dog_id INNER JOIN Users ON Users.user_id = Dogs.owner_id WHERE WalkRequests.status = "open"');
+      const [openreq] = await db.execute('SELECT WalkRequests.request_id, Dogs.name AS dog_name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.username AS owner_username FROM WalkRequests INNER JOIN Dogs ON Dogs.dog_id = WalkRequests.dog_id INNER JOIN Users ON Users.user_id = Dogs.owner_id WHERE WalkRequests.status = "open"');
       res.json(openreq);
     } catch (err) {
       res.status(500).json({ error: 'Failed to fetch open walk requests' });
