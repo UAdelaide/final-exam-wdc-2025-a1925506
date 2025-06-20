@@ -21,9 +21,11 @@
         <div id="app">
             <h1>dog of the day</h1>
 
-        <div class="dog-box">
-            <img :src="https://dog.ceo/api/breeds/image/random" width="400">
-          </div>
+            <div class="dog-box">
+                <img :src="dogImage" width="400" alt="Random Dog" v-if="dogImage">
+                <p v-else>Loading dog image...</p>
+              </div>
+
 
           <button @click="loadDog">Click Here Now To Get a Random Dog, Maybe!</button>
 
