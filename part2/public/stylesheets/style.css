@@ -156,5 +156,6 @@ section {
 }
 
 form {
-    
+    display: none;
+    flex-direction: column;
 }
