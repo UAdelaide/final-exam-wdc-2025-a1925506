@@ -13,7 +13,7 @@
 
      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-        <script src="page.js" defer></script>
+        <script src="indexjs.js" defer></script>
 
     </head>
 
@@ -22,7 +22,7 @@
 
     <body>
 
-        <!-- <div class="dog-box">
+        <div class="dog-box">
             <img :src="https://dog.ceo/api/breeds/image/random" width="400">
           </div>
 
@@ -31,6 +31,52 @@
           <marquee behavior="scroll" direction="right">Dog Walks! Dog Fun! Dog Barking!!</marquee>
         </div>
 
+        <!-- <div id="app" v-bind:style="dark_mode ? {'background-color':'#333533', 'color':'#F5CB5C'} : null">
+
+            <header>
+                <nav class="pure-menu pure-menu-horizontal">
+                    <ul id="topmenu" class="pure-menu-list">
+                        <template v-for="(TOP, index) in top_menu" :key="index">
+                            <li class="pure-menu-item">
+                                <a href="{{TOP.url}}" class="pure-menu-link">{{TOP.title}}</a>
+                            </li>
+                          </template>
+                    </ul>
+                    <div class="pure-menu">
+                        <ul id="submenu" class="pure-menu-list">
+
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="pad" id="ad" v-if="show_ad">
+                <button type="button" class="pure-button" style="float:right;" onclick="vueinst.show_ad = false;">close</button>
+                <img v-bind:src="special.url" alt="" onclick="vueinst.special=SPECIALS[Math.floor((Math.random() * 3))];" />
+                <h3> {{special.name}}</h3>
+                <p> {{special.price}} </p>
+            </div>
+
+
+
+            <main class="pure-g" v-if="!show_ad">
+
+                <div class="pad pure-u-2-3">
+                    <div id="items">
+                        <input type="text" class="pure-u-3-4" /><button type="button" class="pure-button pure-u-1-4">Search</button>
+                    </div>
+
+                    <div id="comments">
+                        <textarea rows="4" cols="60" class="pure-u-1" v-model="c_text">{{c_text}}</textarea>
+                        <button type="button" class="pure-button pure-u-1-4" v-on:click="c_arr.push(c_text)">Add comment</button>
+                        <p v-for="comment in c_arr">{{comment}}</p>
+                    </div>
+                </div>
+
+                <aside class="pad pure-u-1-3">
+
+                    <h3>Salt or Pepper?</h3>
+                    <!-- TASK 1.1 -->
                     <button type="button" class="pure-button pure-u-1-4" onclick="vueinst.choose='Salt';">Salt</button>
                     <button type="button" class="pure-button pure-u-1-4" onclick="vueinst.choose='Pepper!';">Pepper</button>
 
@@ -53,7 +99,7 @@
             </main>
 
         </div>
- -->
+
 
     </body>
 
