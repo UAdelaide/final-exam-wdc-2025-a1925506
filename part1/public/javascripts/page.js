@@ -7,7 +7,7 @@
         { name: 'Worchestershire Sauce', price: '$4.20', url: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Worcester_Sauce_001.jpg' }
     ];
 
-    const { createApp } = Vue;
+const { createApp } = Vue;
 
 createApp({
   data() {
