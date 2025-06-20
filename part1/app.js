@@ -35,7 +35,7 @@ let db;
   }
 })();
 
-// Route to return books as JSON
+// Route to return dog info as JSON
 app.get('/api/dogs', async (req, res) => {
   try {
     const [dogInfo] = await db.execute('SELECT Dogs.name, Dogs.size, Users.username FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id;');
