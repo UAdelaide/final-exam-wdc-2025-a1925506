@@ -17,7 +17,25 @@
 
     </head>
 
+    <div id="app">
+        <h1>DOG WALKING SUPER SERVICE ULTRA PRO V2!!!!</h1>
+
     <body>
+
+
+        <div class="dog-box">
+            <h2>Dog of the Hour (not the day 🐾)</h2>
+            <img :src="dogImage" width="400">
+            <p><strong>Name:</strong> Barkimedes</p>
+            <p><strong>Breed:</strong> ???</p>
+            <p><strong>Owner:</strong> Professor Dogson</p>
+          </div>
+
+          <button @click="loadDog">Click Here Now To Get a Random Dog, Maybe!</button>
+
+          <p>💡NOTE: You have to click the button every single time you want to see a new dog. Because we said so. No auto-loading, sorry!</p>
+          <marquee behavior="scroll" direction="right">Dog Walks! Dog Fun! Dog Barking!!</marquee>
+        </div>
 
         <div id="app" v-bind:style="dark_mode ? {'background-color':'#333533', 'color':'#F5CB5C'} : null">
 
