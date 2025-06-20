@@ -58,7 +58,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
   // Route to return walker summaries as JSON
 app.get('/api/walkrequests/open', async (req, res) => {
     try {
-      const [walkersummaries] = await db.execute('SELECT WalkRequests.request_id, Dogs.name AS dog_name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.username AS owner_username FROM WalkRequests INNER JOIN Dogs ON Dogs.dog_id = WalkRequests.dog_id INNER JOIN Users ON Users.user_id = Dogs.owner_id WHERE WalkRequests.status = "open"');
+      const [walkersummaries] = await db.execute('INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES (5, 2, 4, 3, 'good');');
       res.json(walkersummaries);
     } catch (err) {
       res.status(500).json({ error: 'Failed to fetch walker summaries' });
