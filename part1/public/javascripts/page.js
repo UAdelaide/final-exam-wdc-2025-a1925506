@@ -1,10 +1,4 @@
-//Top menu (task 1.5):
 
-const TOP = [
-    { title:'Home',         url:'/' },
-    { title:'About',        url:'/about' },
-    { title:'Contact Us',   url:'/contact' }
-    ];
 
     const SPECIALS = [
         { name: 'Salt', price: '$0.99', url: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Korean_sea_salt.jpg' },
@@ -13,16 +7,17 @@ const TOP = [
         { name: 'Worchestershire Sauce', price: '$4.20', url: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Worcester_Sauce_001.jpg' }
     ];
 
-    const vueinst = new Vue({
-        el: '#app',
-        data: {
-            choose: 'Choose...',
-            special: SPECIALS[0],
-            show_ad: true,
-            dark_mode: false,
-            top_menu: TOP,
-            c_text: 'type your comment here',
-            c_arr: [],
-        }
+    const { createApp } = Vue;
 
-    });
+createApp({
+  data() {
+    return {
+      dogImage: ''
+    };
+  },
+  async created() {
+    const res = await fetch('https://dog.ceo/api/breeds/image/random');
+    const data = await res.json();
+    this.dogImage = data.message;
+  }
+}).mount('#app');
