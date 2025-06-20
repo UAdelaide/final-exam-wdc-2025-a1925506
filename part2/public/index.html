@@ -11,6 +11,18 @@
 
   <div id="app" class="container py-5">
     <h1 class="mb-4 text-primary">{{ message }}</h1>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="active">
+      <label for="login-username" class="visually-hidden">Username</label>
+      <input id="login-username" type="text" name="username" placeholder="Username" required />
+
+      <label for="login-password" class="visually-hidden">Password</label>
+      <input id="login-password" type="password" name="password" placeholder="Password" required />
+
+      <button type="submit">Login</button>
+    </form>
+
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
 
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
