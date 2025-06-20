@@ -35,23 +35,23 @@
           <marquee behavior="scroll" direction="right">Dog Walks! Dog Fun! Dog Barking!!</marquee>
         </div>
 
-        <div id="app" v-bind:style="dark_mode ? {'background-color':'#333533', 'color':'#F5CB5C'} : null">
+        <!-- <div id="app" v-bind:style="dark_mode ? {'background-color':'#333533', 'color':'#F5CB5C'} : null">
 
             <header>
-                    <nav class="pure-menu pure-menu-horizontal">
-                        <ul id="topmenu" class="pure-menu-list">
-                            <template v-for="(TOP, index) in top_menu" :key="index">
-                                <li class="pure-menu-item">
-                                    <a href="{{TOP.url}}" class="pure-menu-link">{{TOP.title}}</a>
-                                </li>
-                            </template>
-                        </ul>
-                        <div class="pure-menu">
-                            <ul id="submenu" class="pure-menu-list">
+                <nav class="pure-menu pure-menu-horizontal">
+                    <ul id="topmenu" class="pure-menu-list">
+                        <template v-for="(TOP, index) in top_menu" :key="index">
+                            <li class="pure-menu-item">
+                                <a href="{{TOP.url}}" class="pure-menu-link">{{TOP.title}}</a>
+                            </li>
+                          </template>
+                    </ul>
+                    <div class="pure-menu">
+                        <ul id="submenu" class="pure-menu-list">
 
-                            </ul>
-                        </div>
-                    </nav>
+                        </ul>
+                    </div>
+                </nav>
             </header>
 
             <div class="pad" id="ad" v-if="show_ad">
