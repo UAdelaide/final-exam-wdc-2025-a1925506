@@ -7,17 +7,21 @@
     //     { name: 'Worchestershire Sauce', price: '$4.20', url: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Worcester_Sauce_001.jpg' }
     // ];
 
-const { createApp } = Vue;
+    const { createApp } = Vue;
 
-createApp({
-  data() {
-    return {
-      dogImage: ''
-    };
-  },
-  async created() {
-    const res = await fetch('https://dog.ceo/api/breeds/image/random');
-    const data = await res.json();
-    this.dogImage = data.message;
-  }
-}).mount('#app');
+    createApp({
+      data() {
+        return {
+          dogImage: ''
+        };
+      },
+      async created() {
+        try {
+          const res = await fetch('https://dog.ceo/api/breeds/image/random');
+          const data = await res.json();
+          this.dogImage = data.message;
+        } catch (err) {
+          console.error('Failed to load dog image:', err);
+        }
+      }
+    }).mount('#app');
