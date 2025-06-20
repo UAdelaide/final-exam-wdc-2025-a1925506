@@ -45,7 +45,7 @@ app.get('/api/dogs', async (req, res) => {
   }
 });
 
-// Route to return dog info as JSON
+// Route to return open walk requests as JSON
 app.get('/api/walkrequests/open', async (req, res) => {
     try {
       const [dogInfo] = await db.execute('SELECT Dogs.name, Dogs.size, Users.username FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id;');
