@@ -59,10 +59,11 @@
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
+              headers: { 'Content-Type': 'application/json' };
+
               const currentUser = await getCurrentUser();
-if (!currentUser) throw new Error('You must be logged in as a walker');
-body: JSON.stringify({ walker_id: currentUser.user_id })
+              if (!currentUser) throw new Error('You must be logged in as a walker');
+              body: JSON.stringify({ walker_id: currentUser.user_id })
             });
             const result = await res.json();
 
