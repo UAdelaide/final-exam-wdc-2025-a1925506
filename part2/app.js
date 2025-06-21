@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const app = express();
 
-// Middleware
+// Added middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(session({
