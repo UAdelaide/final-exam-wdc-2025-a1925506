@@ -214,6 +214,7 @@ function logout(){
 
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
+    //added a redirect
     xmlhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
           window.location.href = '/'; // or wherever your login page is
