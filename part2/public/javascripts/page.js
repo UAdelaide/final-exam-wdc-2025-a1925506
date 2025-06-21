@@ -190,6 +190,7 @@ function login(){
         if (this.readyState == 4 && this.status == 200) {
             var response = JSON.parse(this.responseText)
             alert("Welcome "+response.user.username);
+            if ()
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
