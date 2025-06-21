@@ -36,7 +36,7 @@ router.get('/me', (req, res) => {
 });
 
 // POST login - changed login form to accept username instead of email
-// changed varibale names from username and password to user and pass
+// fixed variable names from username and password to user and pass
 router.post('/login', async (req, res) => {
   const { user, pass } = req.body;
 
