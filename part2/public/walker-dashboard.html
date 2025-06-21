@@ -57,10 +57,14 @@
 
         async function applyToWalk(requestId) {
           try {
+            //add current user
+            const currentUser = await getCurrentUser();
+            if (!currentUser) throw new Error('You must be logged in as a walker');
+
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ walker_id: user })
+              body: JSON.stringify({ walker_id: currentUseruser })
             });
             const result = await res.json();
 
