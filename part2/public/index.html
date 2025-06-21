@@ -45,43 +45,6 @@
     }).mount('#app');
   </script>
 
-
-  <script>
-  document.getElementById('loginForm').addEventListener('submit', async (e) => {
-  const username= document.getElementById('login-username').value;
-  const password = document.getElementById('login-password').value;
-  try {
-      const response = await fetch('/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ username, password })
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        alert(data.error || 'Login failed');
-        return;
-      }
-
-      // Redirect based on role
-      if (data.user.role === 'owner') {
-        window.location.href = 'owner-dashboard.html';
-      } else if (data.user.role === 'walker') {
-        window.location.href = 'walker-dashboard.html';
-      } else {
-        alert('Unknown user role');
-      }
-
-    } catch (err) {
-      console.error('Login error:', err);
-      alert('Server error. Please try again later.');
-    }
-  });
-  </script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
