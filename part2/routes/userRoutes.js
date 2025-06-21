@@ -37,7 +37,7 @@ router.get('/me', (req, res) => {
 
 // POST login - changed login form to accept username instead of email
 router.post('/login', async (req, res) => {
-  const { username, password } = req.body;
+  const { user, password } = req.body;
 
   try {
     const [rows] = await db.query(`
