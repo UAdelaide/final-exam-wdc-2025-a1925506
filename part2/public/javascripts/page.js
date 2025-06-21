@@ -201,7 +201,7 @@ function login(){
     };
 
     // Open connection to server & send the post data using a POST request
-    // added /api to path
+    // Added /api to path
     xmlhttp.open("POST", "/api/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
     xmlhttp.send(JSON.stringify(user));
@@ -210,9 +210,9 @@ function login(){
 
 function logout(){
 
-    //create AJAX Request
+    // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
-    //added a redirect
+    // Added a redirect
     xmlhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
           window.location.href = '/';
