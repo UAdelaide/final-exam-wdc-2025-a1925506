@@ -191,10 +191,10 @@ function login(){
             var response = JSON.parse(this.responseText)
             alert("Welcome "+response.user.username);
             if (response.user.role == "owner"){
-                window.localStorage.href="owner-dashboard.html"
+                window.locationbar.href="owner-dashboard.html"
             }
             if (response.user.role == "owner"){
-                window.localStorage.href="walker-dashboard.html"
+                window.location.href="walker-dashboard.html"
             }
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
