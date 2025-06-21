@@ -13,7 +13,7 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
 
     <!-- Login Form -->
-    <form id="loginForm">
+    <form id="loginForm" onsubmit="event.preventDefault(); login();">
       <label for="username">Username</label>
       <br>
       <input id="username" type="text" name="username" placeholder="Username" required />
