@@ -8,7 +8,7 @@ a {
 }
 
 
-/* 
+/*
 * {
   box-sizing: border-box;
 } */
@@ -40,11 +40,11 @@ header {
   border-bottom: 1px solid #333533;
 }
 
-footer {
+/* footer {
   margin-top: 1em;
   border-top: 1px solid #333533;
   text-align: center;
-}
+} */
 
 h1, h2, h3, h4, h5 {
   font-family: 'Playfair Display', serif;
@@ -55,9 +55,9 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
 }
 
-.pad {
+/* .pad {
   padding: 1em;
-}
+} */
 
 .item {
   clear: left;
