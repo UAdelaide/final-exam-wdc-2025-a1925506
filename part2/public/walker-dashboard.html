@@ -59,8 +59,6 @@
           try {
             //add current user
             const currentUser = await getCurrentUser();
-            if (!currentUser) throw new Error('You must be logged in as a walker');
-
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
