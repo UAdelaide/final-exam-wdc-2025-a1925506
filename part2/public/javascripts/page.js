@@ -194,7 +194,7 @@ function login(){
                 window.localStorage.href="owner-dashboard.html"
             }
             if (response.user.role == "owner"){
-                window.localStorage.href="owner-dashboard.html"
+                window.localStorage.href="walker-dashboard.html"
             }
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
