@@ -214,6 +214,11 @@ function logout(){
 
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          window.location.href = '/'; // or wherever your login page is
+        }
+      };
 
     // Open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/users/logout", true);
