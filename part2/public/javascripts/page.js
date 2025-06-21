@@ -212,16 +212,16 @@ function login(){
 
 function logout(){
 
-    // Create AJAX Request
+    //create AJAX Request
     var xmlhttp = new XMLHttpRequest();
     //added a redirect
     xmlhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-          window.location.href = '/'; // or wherever your login page is
+          window.location.href = '/';
         }
       };
 
-    // Open connection to server & send the post data using a POST request
+    //open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/api/users/logout", true);
     xmlhttp.send();
 
