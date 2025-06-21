@@ -186,6 +186,7 @@ function login(){
     var xmlhttp = new XMLHttpRequest();
 
     // Define function to run on response
+    //rerouted it to 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var response = JSON.parse(this.responseText)
