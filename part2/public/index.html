@@ -48,7 +48,7 @@
 
   <script>
   document.getElementById('loginForm').addEventListener('submit', async (e) => {
-  const email = document.getElementById('login-username').value;
+  const username= document.getElementById('login-username').value;
   const password = document.getElementById('login-password').value;
   try {
       const response = await fetch('/login', {
