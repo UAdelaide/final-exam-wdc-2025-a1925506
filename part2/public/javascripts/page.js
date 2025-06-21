@@ -191,7 +191,7 @@ function login(){
             var response = JSON.parse(this.responseText)
             alert("Welcome "+response.user.username);
             if (response.user.role == "owner"){
-                window.locationbar.href="owner-dashboard.html"
+                window.location.href="owner-dashboard.html"
             }
             if (response.user.role == "owner"){
                 window.location.href="walker-dashboard.html"
